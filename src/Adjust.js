@@ -37,7 +37,7 @@ export class Adjust {
         environment: this.config.environment,
         os_name: this.config.osName,
       })
-      .set('Client-SDK', 'mururu-adjust-sdk')
+      .set('Client-SDK', 'mururu-adjust-sdk4.0.0')
       .end((err, res) => {});
   }
 
@@ -52,7 +52,7 @@ export class Adjust {
         callbackParams: JSON.stringify(adjustEvent.callbackParams),
         partnerParams: JSON.stringify(adjustEvent.partnerParams),
       })
-      .set('Client-SDK', 'mururu-adjust-sdk')
+      .set('Client-SDK', 'mururu-adjust-sdk4.0.0')
       .end(() => {});
   }
 }
