@@ -1,0 +1,36 @@
+{
+  "name": "@mururu/adjust-sdk",
+  "version": "0.1.0",
+  "description": "Unofficial SDK for Adjust",
+  "main": "lib/Adjust.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "babel src -d lib",
+    "format": "prettier --single-quote --trailing-comma es5 --write src/**/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mururu/adjust-sdk.git"
+  },
+  "author": "mururu <yuki.mururu@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mururu/adjust-sdk/issues"
+  },
+  "homepage": "https://github.com/mururu/adjust-sdk#readme",
+  "files": [
+    "lib"
+  ],
+  "dependencies": {
+    "superagent": "^4.1.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.3.4",
+    "@babel/plugin-proposal-class-properties": "^7.3.4",
+    "@babel/preset-env": "^7.3.4",
+    "@babel/preset-flow": "^7.0.0",
+    "flow-bin": "^0.94.0",
+    "prettier": "^1.16.4"
+  }
+}
