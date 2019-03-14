@@ -9,7 +9,7 @@ export class AdjustConfig {
   static EnvironmentSandbox = 'sandbox';
   static EnvironmentProduction = 'production';
 
-  constructor(appToken: string, environment: string, deviceId: string, osName) {
+  constructor(appToken: string, environment: string, deviceId: string, osName: string) {
     this.appToken = appToken;
     this.environment = environment;
     this.deviceId = deviceId;
@@ -32,7 +32,7 @@ export class Adjust {
     const res = await request
       .get('https://app.adjust.com/session')
       .query({
-        gps_adid: this.config.device_id,
+        gps_adid: this.config.deviceId,
         app_token: this.config.appToken,
         environment: this.config.environment,
         os_name: this.config.osName,
