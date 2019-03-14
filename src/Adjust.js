@@ -43,7 +43,7 @@ export class Adjust {
 
   async trackEvent(adjustEvent: AdjustEvent) {
     const res = await request
-      .get('https://app.adjust.com/session')
+      .get('https://app.adjust.com/event')
       .query({
         gps_adid: this.config.deviceId,
         app_token: this.config.appToken,
