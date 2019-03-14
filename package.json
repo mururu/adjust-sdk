@@ -1,6 +1,6 @@
 {
   "name": "@mururu/adjust-sdk",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Unofficial SDK for Adjust",
   "main": "lib/Adjust.js",
   "scripts": {
