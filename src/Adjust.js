@@ -9,7 +9,12 @@ export class AdjustConfig {
   static EnvironmentSandbox = 'sandbox';
   static EnvironmentProduction = 'production';
 
-  constructor(appToken: string, environment: string, deviceId: string, osName: string) {
+  constructor(
+    appToken: string,
+    environment: string,
+    deviceId: string,
+    osName: string
+  ) {
     this.appToken = appToken;
     this.environment = environment;
     this.deviceId = deviceId;
@@ -49,8 +54,9 @@ export class Adjust {
         app_token: this.config.appToken,
         environment: this.config.environment,
         os_name: this.config.osName,
-        callbackParams: JSON.stringify(adjustEvent.callbackParams),
-        partnerParams: JSON.stringify(adjustEvent.partnerParams),
+        event_token: adjustEvent.eventToken,
+        callback_params: JSON.stringify(adjustEvent.callbackParams),
+        partner_params: JSON.stringify(adjustEvent.partnerParams),
       })
       .set('Client-SDK', 'mururu-adjust-sdk4.0.0')
       .end(() => {});
